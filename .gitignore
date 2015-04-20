@@ -5,7 +5,8 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore all logfiles and tempfiles.
-/yelp_dataset_challenge_academic_dataset
+/yelp_dataset_challenge_academic_dataset/*
+/review_based_on_business_ID/*
 
 .DS_Store
 
