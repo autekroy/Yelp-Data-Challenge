@@ -7,6 +7,7 @@
 # Ignore all logfiles and tempfiles.
 /yelp_dataset_challenge_academic_dataset/*
 /review_based_on_business_ID/*
+/review_based_on_business_and_category/*
 
 .DS_Store
 
