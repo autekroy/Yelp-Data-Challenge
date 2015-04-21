@@ -23,10 +23,18 @@ def read_and_write_file():
 			f.close() # definitely this line! or it will missing last line in file
 
 
-def divide_review_on_category():
+# refine category name. replace '/', ' ', and '&'
+def refine_nmae(string):
+	string = string[1:-1] #  #remove quotation mark because it's from json.dumps()
+	string = string.replace('/', '_')
+	string = string.replace('&', 'and')
+	string = string.replace(' ', '_')
+	return string
 
+
+def divide_review_on_category():
 	json_path = "yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_business.json"
-	
+
 	with open(json_path, "r") as business:
 		for line in business:
 			line_contents = json.loads(line)
@@ -35,16 +43,20 @@ def divide_review_on_category():
 			# print filename
 			if os.path.isfile(filename): # this business id has review data
 				for cat in line_contents[u'categories']:
-					folder_path = 'review_based_on_business_and_category/' + json.dumps(cat)[1:-1] #remove quotation mark
+					category = refine_nmae(json.dumps(cat))
+
+					folder_path = 'review_based_on_business_and_category/' + category
 					# print folder_path
 					if not os.path.exists(folder_path): # create category folder
 						os.makedirs(folder_path)
 					shutil.copyfile(filename, folder_path + '/' + ID + '.json')
-
+					f = open(folder_path + '/' + category +'.json', 'a')
+					f.write(json.dumps(line_contents) + '\n')
+					f.close() # definitely this line! or it will missing last line in file
 
 
 def main():
-	read_and_write_file() # take within 3 miuntes
+	# read_and_write_file() # take within 3 miuntes
 	divide_review_on_category() # take within minutes
 
 if __name__ == "__main__":
