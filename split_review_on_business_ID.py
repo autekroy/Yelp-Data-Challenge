@@ -5,10 +5,8 @@
 ### create reviews based on category of different business ID
 ### all reviews (different category) will in the "review_based_on_business_and_category" folder
 
-import re
 import json
 import os.path
-import shutil
 
 def read_and_write_file():
 	"""Read in the json dataset file from 'yelp_academic_dataset_review.json' """

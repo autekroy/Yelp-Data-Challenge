@@ -5,29 +5,43 @@ from mrjob.protocol import JSONValueProtocol
 import os.path
 import shutil
 
-json_path = "yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_business.json"
 
-count = 0
-with open(json_path, "r") as business:
-	for line in business:
-		count += 1
-		if count == 10:
-			break
+json_path = "review_based_on_business_and_category/Restaurants/4bEjOyTaDG24SY5TxsaUNQ.json"
+
+# test = []
+with open(json_path, "r") as review:
+	for line in review:
 		line_contents = json.loads(line)
-		ID = line_contents[u'business_id']
-		filename = 'review_based_on_business_ID/' + ID + '.json'
-		# print filename
-		if os.path.isfile(filename): # this business id has review data
-			for cat in line_contents[u'categories']:
-				category = refine_nmae(json.dumps(cat))
-				folder_path = 'review_based_on_business_and_category/' + category
-				# print folder_path
-				if not os.path.exists(folder_path): # create category folder
-					os.makedirs(folder_path)
-				shutil.copyfile(filename, folder_path + '/' + ID + '.json')
-				f = open(folder_path + '/' + category +'.json', 'a')
-				f.write(json.dumps(line_contents) + '\n')
-				f.close() # definitely this line! or it will missing last line in file
+		# test.append(line_contents)
+		f = open('all_review_based_on_category/Restaurants_review.txt', 'a')
+		f.write(json.dumps(line_contents[u'text'])[1:-1] + '\n')
+		f.close()
+
+# ==========================================================================
+# Test function "divide_review_on_category"
+# json_path = "yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_business.json"
+
+# count = 0
+# with open(json_path, "r") as business:
+# 	for line in business:
+# 		count += 1
+# 		if count == 10:
+# 			break
+# 		line_contents = json.loads(line)
+# 		ID = line_contents[u'business_id']
+# 		filename = 'review_based_on_business_ID/' + ID + '.json'
+# 		# print filename
+# 		if os.path.isfile(filename): # this business id has review data
+# 			for cat in line_contents[u'categories']:
+# 				category = refine_nmae(json.dumps(cat))
+# 				folder_path = 'review_based_on_business_and_category/' + category
+# 				# print folder_path
+# 				if not os.path.exists(folder_path): # create category folder
+# 					os.makedirs(folder_path)
+# 				shutil.copyfile(filename, folder_path + '/' + ID + '.json')
+# 				f = open(folder_path + '/' + category +'.json', 'a')
+# 				f.write(json.dumps(line_contents) + '\n')
+# 				f.close() # definitely this line! or it will missing last line in file
 
 
 

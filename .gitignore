@@ -8,7 +8,10 @@
 /yelp_dataset_challenge_academic_dataset/*
 /review_based_on_business_ID/*
 /review_based_on_business_and_category/*
+/all_review_based_on_category/*
 
 .DS_Store
 
+# reference paper and material
+.YelpDatasetChallengeWinner_ImprovingRestaurants.pdf
 
