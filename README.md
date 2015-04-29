@@ -19,16 +19,25 @@ Self project for own interests. Top foods in restaurants.
     * may have same file in different category folder so the size of folder is larger
     * For everey category folder, a .json file (named after category) includes every business id in this category
     * take in 4 minutes
+2. run `read_review.py`: create files contain all review in one business if
+  * Test LAS and LDA
+
+### Data Visualization
+ 1. [D3.js](https://github.com/mbostock/d3/wiki/Gallery)
+    * [Bubble Chart](http://bl.ocks.org/mbostock/4063269)
 
 ### Programming Language, Tool & Library
  1. Python 2.7.6
-    * [gensim](https://radimrehurek.com/gensim/index.html)
+    * [gensim](https://radimrehurek.com/gensim/index.html): for topic modeling
+    * [vaderSentiment](https://pypi.python.org/pypi/vaderSentiment): for sentimental analysis
 
 ### Inspiration & method
  1. [Expectation–maximization algorithm](http://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm): find maximum likelihood or maximum a posteriori (MAP) estimates of parameters in statistical models
  2. [Latent semantic analysis](http://en.wikipedia.org/wiki/Latent_semantic_analysis)
  3. [Latent Dirichlet allocation](http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation)
- 
+ 4. [Text Mining](http://en.wikipedia.org/wiki/Text_mining)
+ 5. [LSI](http://en.wikipedia.org/wiki/Latent_semantic_indexing)
+ 6. [SVD](http://en.wikipedia.org/wiki/Singular_value_decomposition)
 
 ### Reference
  1. [Improving Restaurants by Extracting Subtopics from Yelp Reviews](http://www.yelp.com/html/pdf/YelpDatasetChallengeWinner_ImprovingRestaurants.pdf)

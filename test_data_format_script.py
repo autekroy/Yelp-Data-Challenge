@@ -1,21 +1,24 @@
+###### Test script for functions in read_review.py and split_review_on_business_ID.py
+
 import re
 import json
-from mrjob.job import MRJob
-from mrjob.protocol import JSONValueProtocol
 import os.path
 import shutil
 
 
-json_path = "review_based_on_business_and_category/Restaurants/4bEjOyTaDG24SY5TxsaUNQ.json"
+# ==========================================================================
+# Test function "all_reviews_from_business"
 
-# test = []
-with open(json_path, "r") as review:
-	for line in review:
-		line_contents = json.loads(line)
-		# test.append(line_contents)
-		f = open('all_review_based_on_category/Restaurants_review.txt', 'a')
-		f.write(json.dumps(line_contents[u'text'])[1:-1] + '\n')
-		f.close()
+# json_path = "review_based_on_business_and_category/Restaurants/4bEjOyTaDG24SY5TxsaUNQ.json"
+
+# # test = []
+# with open(json_path, "r") as review:
+# 	for line in review:
+# 		line_contents = json.loads(line)
+# 		# test.append(line_contents)
+# 		f = open('all_review_based_on_category/Restaurants_review.txt', 'a')
+# 		f.write(json.dumps(line_contents[u'text'])[1:-1] + '\n')
+# 		f.close()
 
 # ==========================================================================
 # Test function "divide_review_on_category"
