@@ -30,14 +30,18 @@ Self project for own interests. Top foods in restaurants.
  1. Python 2.7.6
     * [gensim](https://radimrehurek.com/gensim/index.html): for topic modeling
     * [vaderSentiment](https://pypi.python.org/pypi/vaderSentiment): for sentimental analysis
+    * [NLTK - Natural Language ToolKit](http://textminingonline.com/dive-into-nltk-part-i-getting-started-with-nltk)
 
-### Inspiration & method
+### Wikipedia Inspiration & method
  1. [Expectation–maximization algorithm](http://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm): find maximum likelihood or maximum a posteriori (MAP) estimates of parameters in statistical models
  2. [Latent semantic analysis](http://en.wikipedia.org/wiki/Latent_semantic_analysis)
  3. [Latent Dirichlet allocation](http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation)
  4. [Text Mining](http://en.wikipedia.org/wiki/Text_mining)
  5. [LSI](http://en.wikipedia.org/wiki/Latent_semantic_indexing)
  6. [SVD](http://en.wikipedia.org/wiki/Singular_value_decomposition)
+
+### Other Dataset
+ 1. [SNPA Amazon reviews](http://snap.stanford.edu/data/web-Amazon.html)
 
 ### Reference
  1. [Improving Restaurants by Extracting Subtopics from Yelp Reviews](http://www.yelp.com/html/pdf/YelpDatasetChallengeWinner_ImprovingRestaurants.pdf)
