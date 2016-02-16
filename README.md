@@ -17,10 +17,12 @@ Self project for own interests. Top foods in restaurants.
     * `review_based_on_business_and_category` folder (5.06 G)
     * review data based on category from above folder
     * may have same file in different category folder so the size of folder is larger
-    * For everey category folder, a .json file (named after category) includes every business id in this category
+    * For everey category folder, a .json file (named after category) includes every business id in this category will be included in `_Category_business_list` folder
     * take in 4 minutes
-2. run `read_review.py`: create files contain all review in one business if
-  * Test LAS and LDA
+2. run `python combine_review.py Restaurants`: create files contain all review in one business c
+  * By choose a category (Ex: Restaurants), we create a training dataset and testing dataset for such category.
+  * Create `dataset` to store training and testing dataset
+  * Format of training and testing dataset (split by tab): business_id, review, stars
 
 ### Data Visualization
  1. [D3.js](https://github.com/mbostock/d3/wiki/Gallery)

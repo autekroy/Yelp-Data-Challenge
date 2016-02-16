@@ -13,6 +13,7 @@
 .DS_Store
 
 # reference paper and material
-CTA_Essex_Day1.pdf
+/reference paper or pdf files
 
-
+# training and testing data set
+/dataset
